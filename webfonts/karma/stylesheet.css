@@ -1,0 +1,8 @@
+@font-face {
+	font-family: 'karma';
+	src: url('karma-webfont.eot');
+	src: url('karma-webfont.eot?#iefix') format('embedded-opentype'),
+		url('karma-webfont.woff') format('woff'),
+		url('karma-webfont.ttf') format('truetype'),
+		url('karma-webfont.svg') format('svg');
+}

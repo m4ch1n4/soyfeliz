@@ -13,20 +13,41 @@
 
         <link rel="stylesheet" href="css/normalize.css">
         <link rel="stylesheet" href="css/main.css">
-		<link rel="stylesheet" href="../soyfeliz.sass">
+	
+		
 		<title>Soy feliz Studio</title>
 		
+    <!--The following script tag downloads a font from the Adobe Edge Web Fonts server for use within the web page. We recommend that you do not modify it.-->
+    <script>var __adobewebfontsappname__="dreamweaver"</script>
+    <script src="http://use.edgefonts.net/antic-didone:n4:default;maiden-orange:n4:default;noticia-text:n4:default.js" type="text/javascript"></script>
+
     </head>
     <body>
+	<div id="video-player" class="fullscreen-bg container-fluid">
+    <video class="fullscreen-bg__video" autoplay="" muted="" poster="">
+      <source src="www.soyfeliz.com/VID4.webm" type="video/webm">
+      <source src="www.soyfeliz.com/VID4.webm" type="video/webm">
+      <source src="www.soyfeliz.com/VID4.webm" type="video/webm">
+    </video>
+    <div class="fullscreen-bg__playlist">
+
+      <a href="www.soyfeliz.com/VID2.webm" class=""></a>
+      <a href="www.soyfeliz.com/VID3.webm" class=""></a>
+      <a href="www.soyfeliz.com/VID4.webm" class="current-video"></a>
+    </div>
+  </div>
         <!--[if lte IE 9]>
             <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
         <![endif]-->
 
-        <!-- Add your site or application content here -->
+   
+		<!-- Add your site or application content here -->
+		
 	<header class="header">
- <nav class="nav2">
+		  
+		<nav class="nav2">
 		<ul>
-		  <li class="navhome"> <img src="Images/logo_grande_azul_blanco.svg" alt="soyfeliz">
+		  <li class="navhome"> <img src="Images/logo_grande_azul_blanco.svg" alt="soyfeliz" class="omg">
 			
 			</li>
 		  <li class="buting navartist" >
@@ -43,53 +64,78 @@
 			</li>
 			  <li class="buting navinsta"> <strong>Instagram</strong> </li>
 		</ul>
-	</nav> 
+		</nav>
 </header>
 
 	<main class="mainw">
-<video id="bgvid" playsinline autoplay muted loop>
-  <!-- WCAG general accessibility recommendation is that media such as background video play through only once. Loop turned on for the purposes of illustration; if removed, the end of the video will fade in the same way created by pressing the "Pause" button  -->
-<source src="../vid2.m4v" type="video/webm">
-</video>	
+		
 
-		<article class=" mainw article1artist">
+<!--<video id="bgvid" playsinline autoplay muted loop>
+  WCAG general accessibility recommendation is that media such as background video play through only once. Loop turned on for the purposes of illustration; if removed, the end of the video will fade in the same way created by pressing the "Pause" button  
+<source src="../vid2.m4v" type="video/webm">
+</video> -->
+
+		<article class="mainw article1artist ">
 		  <h1>·Artist·</h1>
+			<div class="grid-container-arts">
+			<div class=" item1"><span><img src="http://www.soyfelizstudio.com/pablo.jpg" alt="paibol" width="90%"><h1>Pablo Diaz gordoa</h1></span></div>
+			<div class=" item2"><span><img src="http://www.soyfelizstudio.com/alan.jpg" alt="alan" width="90%"><h1>Alan Shepard</h1></span></div>
+			<div class=" item3"><span><img src="http://www.soyfelizstudio.com/alan.jpg" alt="alan" width="90%"><h1>Carlos Hernández</h1></span></div>
+			<div class=" item4"><span><img src="http://www.soyfelizstudio.com/alan.jpg" alt="alan" width="90%"><h1>Ximena R.E.</h1></span></div>
+			<div class=" item5"><span><img src="http://www.soyfelizstudio.com/alan.jpg" alt="alan" width="90%"><h1>Rubén Morales</h1></span></div>
+			<div class=" item6"><span><img src="http://www.soyfelizstudio.com/alan.jpg" alt="alan" width="83.6%"><h1>Fher Val</h1></span></div>
+			</div>	
 		</article>
+	
 		
 		<article class="article1press">
 		  <h1>·Press·</h1>
 		</article>
 		<article class="article1contact">
-		  <h1>·Contact·</h1>
-			<form>
-			<fieldset>
+		  <h1>·Contacto·</h1>
+		  <form class="forma grid-container-form" action="form.php" method="POST">
+			<fieldset class="item1">
 				<legend>
-				Nombre:
-			 <input type="text">
-				Apellido:
-			 <input type="text">	
-			<input type="checkbox">M
-			<input type="checkbox">F
-			Telefono:
-			<input type="tel">
-			E-mail:
-			<input type="email">
-			Dirección:
-					<input type="text">
-					<input type="text">
-					<input type="text">
+		    <p class="forma">
+				Nombre(s):
+			 <input name="" type="text" required="required" placeholder="Name" autocomplete="on"> </p>
+			
+					<p>
+						Apellido:
+			 
+				<input name="" type="text" required="required" placeholder="Last Name" autocomplete="on"> </p>
+			
+					<p class="forma"><input  name="" type="checkbox">M</p>
+			
+			  <p class="forma"><input type="checkbox" name="">F</p>
+			
+					<p class="forma"> Teléfono:
+<input type="tel" required="required" placeholder="Telephone Number" autocomplete="on" size="10" maxlength="10"></p>
+			
+					<p>
+						E-mail:
+			<input name="" type="email" required="required" placeholder="enter mail" autocomplete="on"></p>
+					<p> Fecha de nacimento <input type="date" required="required" autocomplete="on"></p>
+			
+			<p>Dirección:
+					<p><input type="text" placeholder="Adress" autocomplete="on"></p>
+					<p><input type="text"></p>
+					<p><input type="text"></p>
+					</p>
 				
 				</legend>
 				
 				</fieldset>
-				<fieldset>
+				
+			<fieldset class="item2">
 				    <legend>
-						Parte del cuerpo:<input type="text">
-						Tamaño:<input type="text">
-						Descripción:<textarea></textarea>
-						Referencia:<input type="file">
-						<input type="checkbox"> He leido el Aviso de Privasidad.
-						<input type="checkbox"> Tengo mas de 18 años de edad.
+						<p>Parte del cuerpo:<input type="text" required="required" placeholder="Body part"></p>
+						<p>Tamaño: (cm)<input type="text" placeholder="What size?"></p>
+				  <p>Descripción:<textarea rows="10" required="required" wrap="soft" placeholder="Write your text"></textarea></p>
+						<p>Referencia: ("jpg" ,"png","pdf")
+				    <input type="file" name="entry.1881943265"></p>
+						<p><input type="checkbox"> He leido el Aviso de Privasidad.</p>
+			  <p> <input type="checkbox"> Tengo mas de 18 años de edad.</p>
 					</legend>
 					
 				</fieldset>
@@ -100,52 +146,71 @@
 			
 				
 			</form>
+		
 		</article>
+		
 		<article class="article1faq" >
-		  <h1>·F.A.Q.·</h1>
-			<h2>¿Cómo puedo agendar una cita?</h2>
-	        &nbsp;
-	        <p class="p1"> Una vez que hayas seleccionado tu artista(s) preferido puedes llamar al &nbsp;Once you’ve selected your preferred artist(s), you can either stop by the shop, call us at (52) 55 6844 8325, o enviar un &nbsp;mail detallado con la descripcion del diseño, una foto de referencia y las fechas que te gustaria agendar.Esto nos ayuda a responder rapido y eficientemente.Agendamos citas con un maximo de tres meses de anterioridad.</p>
-	        <h2>¿Qué edad debo tener para &nbsp;hacerme un tatuaje?</h2>
-	        <p class="p1">Debes tener 18 años de edad y traer alguna identificación con fotografía, que sea Oficial. (INE, Pasaporte) No se tatúa a menores de edad. Sin excepciones</p>
-	        <h2>¿Qué precio tiene un tatuaje? </h2>
-	        <p class="p1">El costo depende del tamaño, tiempo de elaboración y el diseño final de tu tatuaje. </p>
-	        <h2>¿Necesito hacer &nbsp;deposito para confirmar mi cita?</h2>
-	        <p class="p1">Si, es necesario realizar de 15 a 10 días hábiles antes de tu cita un deposito (acordado en tu cotización) para confirmarla. En caso de mover tu cita o cancelarla se debe hacer con 48 horas hábiles antes del día de tu cita para poder conservar tu anticipo.</p>
-	        <p>Si no se efectúa con el tiempo requerido, tu anticipo no se tomará en cuenta para la siguiente fecha a agendar. Los depósitos no son reembolsables y se aplicarán al precio final de tu tatuaje.</p>
-	        <h2>¿Puedo pagar con tarjeta?</h2>
-	        <p class="p1">Se aceptan todas las tarjetas de debito y crédito, cobrando el 5% de comisión sobre el costo final de tu tatuaje. </p>
-	        <h2>¿Me puedes cubrir un tatuaje que no me gusta?</h2>
-	        <p>Si trabajamos arreglos, si el diseño a cubrir lo permite. Recuerden que somos tatuadores no magos. </p>
-	        <h2>¿En dónde se encuentran ubicados?</h2>
-	        <p>La dirección del estudio se te proporcionará una vez concretada tu cita. </p>
-			  <h2>¿Puedo ir acompañado?</h2>
-	        <p>Te recomendamos que vengas solo, ya que la elaboración de tu tatuaje puede demorarse y tu acompañante puede aburrirse, en caso de querer venir acompañado, que sea solo una persona. </p>
-          <h2>¿Cómo debo prepararme para mi tatuaje?</h2>
-	            <p>Es recomendable antes del día de tu cita, comer bien no desvelarse, ni consumir bebidas alcohólicas, el alcohol puede aumentar el sangrado de tu tatuaje. El área que vas a tatuarte, tiene que estar muy limpia y libre de vello. </p>
-	            <h2>¿Cuánto tiempo tarda en sanar mi tatuaje?</h2>
-	            <p>Se tarda aproximadamente dos semanas en sanar, depende del cuidado que le otorgues. </p>
-	            <h2>¿Cómo puedo cuidar mi tatuaje?</h2>
+		  <h1>·F.A.Q.S.·</h1>
+	<div class="grid-container-faq">
+		<div class="item1">
+		  <h2 class="col1">Cómo puedo agendar una cita?<br>
+	      </h2>
+		  <p class= "faq_art_div"> Una vez que hayas seleccionado tu artista(s) preferido puedes llamar al,(52) 55 6844 8325, o enviar un mail detallado con la descripcion del diseño, una foto de referencia y las fechas que te gustaria agendar.Esto nos ayuda a responder rapido y eficientemente.&nbsp;Agendamos citas con un maximo de tres meses de anterioridad.</p>
+		  <h2 class="col1">Qué edad debo tener para hacerme un tatuaje?</h2>
+		  <p  class= "faq_art_div" >Debes tener 18 años de edad y traer alguna identificación con fotografía, que sea Oficial. (INE, Pasaporte) No se tatúa a menores de edad. Sin excepciones</p>
+	        
+			<h2 class="col1">Qué precio tiene un tatuaje? </h2>
+	        <p  class= "faq_art_div">
+				El costo depende del tamaño, tiempo de elaboración y el diseño final de tu tatuaje. </p>
+	        
+			<h2 class="col1">Necesito hacer &nbsp;deposito para confirmar mi cita?</h2>
+	        <p  class= "faq_art_div">Si, es necesario realizar de 15 a 10 días hábiles antes de tu cita un deposito (acordado en tu cotización) para confirmarla. En caso de mover tu cita o cancelarla se debe hacer con 48 horas hábiles antes del día de tu cita para poder conservar tu anticipo.</p>
+	        <p  class= "faq_art_div">Si no se efectúa con el tiempo requerido, tu anticipo no se tomará en cuenta para la siguiente fecha a agendar. Los depósitos no son reembolsables y se aplicarán al precio final de tu tatuaje.</p>
+	        
+			<h2 class="col1">Puedo pagar con tarjeta?</h2>
+			<p  class= "faq_art_div">Se aceptan todas las tarjetas de debito y crédito, cobrando el 5% de comisión sobre el costo final de tu tatuaje. </p>
+	        
+			<h2 class="col1">Me puedes cubrir un tatuaje que no me gusta?</h2>
+	        <p class= "faq_art_div">Si trabajamos arreglos, si el diseño a cubrir lo permite. Recuerden que somos tatuadores no magos. </p>
+	        
+			
+			<h2 class="col1">En dónde se encuentran ubicados?</h2>
+	        <p  class= "faq_art_div">La dirección del estudio se te proporcionará una vez concretada tu cita. </p>
+			
+			<h2 class="col1">Qué precio tiene un tatuaje? </h2>
+	        <p  class= "faq_art_div">
+				Manda un correo a : contacto@soyfelizstudio.com. </p>
+			
+			<h2 class="col1">Puedo ir acompañado?</h2>
+	        <p class= "faq_art_div">Te recomendamos que vengas solo, ya que la elaboración de tu tatuaje puede demorarse y tu acompañante puede aburrirse, en caso de querer venir acompañado, que sea solo una persona. </p> </div>
+			 <div class=" item2 "><h2 class="col1">Cómo debo prepararme para mi tatuaje?</h2>
+	            <p class= "faq_art_div2">Es recomendable antes del día de tu cita, comer bien no desvelarse, ni consumir bebidas alcohólicas, el alcohol puede aumentar el sangrado de tu tatuaje. El área que vas a tatuarte, tiene que estar muy limpia y libre de vello. </p>
+	        
+			<h2 class="col1" >Cuánto tiempo tarda en sanar mi tatuaje?</h2>
+	            <p class= "faq_art_div2">Se tarda aproximadamente dos semanas en sanar, depende del cuidado que le otorgues. </p>
+	        
+			<h2 class="col1">Cómo puedo cuidar mi tatuaje?</h2>
 	          
-		  <p>Debes lavar 2 a 3 veces al día tu tatuaje con jabón neutro, después de limpiarlo aplícale una capa ligera de pomada “Bepanthen” (Existen varias pomadas para cuidar tus tatuajes como “tattoo goo”, hay quienes prefieren ponerse miel de abeja o aceite de coco, todo funciona, solo que el “Bepanthen” es lo mas usado y no tiene problemas) No lo sumerjas, esto significa duchas breves con agua tibia, no jacuzzis, tinas, vapor, sauna, albercas o Mar.</p><p> No permitas que le de el sol directamente. Evita rascarte, o removerte las costras, puedes desprender segmentos de pigmentación.</p> <p>Evitar todo tipo de ejercicio de contacto, de sudoración extrema o que cause demasiada tensión en la zona del tatuaje. Todos los cuidados deberán de seguirse por lo menos durante 15 días después de realizarte tu tatuaje.</p> <p> Se debe contemplar que entre mas sanos nos mantengamos, mas rápido cicatrizará, por lo que es necesario evitar carne de puerco, grasas, frituras y sales. Hay que llevarla leve con el alcohol, que además de atrasar la cicatrización, lo puedes lastimar bajo sus efectos.</p>
-<p>Manda un correo a : contacto@soyfelizstudio.com</p>
-	            <h2>¿Haces tatuajes sobre cicatrices? </h2>
-	            <p>Si, solo que debido a que la piel ya esta dañada es probable que el tatuaje pierda pigmentación.</p>
-	            <h2>¿Haces tatuajes en tinta blanca?</h2>
-	            <p>Realizamos tatuajes en tinta blanca, pero no son recomendables, debido a que su cicatrización es un poco complicada y no siempre terminan del tono deseado, pueden ponerse amarillentos o café y en su mayoría se desvanecen por completo con el tiempo, en todo caso de que no te guste se puede retocar en algún otro color, pero tendrías que pagar la cita por completo.<br>
+		  <p class= "faq_art_div2">Debes lavar 2 a 3 veces al día tu tatuaje con jabón neutro, después de limpiarlo aplícale una capa ligera de pomada “Bepanthen” (Existen varias pomadas para cuidar tus tatuajes como “tattoo goo”, hay quienes prefieren ponerse miel de abeja o aceite de coco, todo funciona, solo que el “Bepanthen” es lo mas usado y no tiene problemas) No lo sumerjas, esto significa duchas breves con agua tibia, no jacuzzis, tinas, vapor, sauna, albercas o Mar.No permitas que le de el sol directamente. Evita rascarte, o removerte las costras, puedes desprender segmentos de pigmentación.Evitar todo tipo de ejercicio de contacto, de sudoración extrema o que cause demasiada tensión en la zona del tatuaje. Todos los cuidados deberán de seguirse por lo menos durante 15 días después de realizarte tu tatuaje.Se debe contemplar que entre mas sanos nos mantengamos, mas rápido cicatrizará, por lo que es necesario evitar carne de puerco, grasas, frituras y sales. Hay que llevarla leve con el alcohol, que además de atrasar la cicatrización, lo puedes lastimar bajo sus efectos.</p>
+
+	            <h2 class="col1" >Haces tatuajes sobre cicatrices? </h2>
+	            <p class= "faq_art_div2">Si, solo que debido a que la piel ya esta dañada es probable que el tatuaje pierda pigmentación.</p>
+	            <h2 class="col1">Haces tatuajes en tinta blanca?</h2>
+	            <p class= "faq_art_div2">Realizamos tatuajes en tinta blanca, pero no son recomendables, debido a que su cicatrización es un poco complicada y no siempre terminan del tono deseado, pueden ponerse amarillentos o café y en su mayoría se desvanecen por completo con el tiempo, en todo caso de que no te guste se puede retocar en algún otro color, pero tendrías que pagar la cita por completo.
 	              </p>
-			  <h2>Si sufro de algún padecimiento medico, ¿Me puedo tatuar?</h2>
-	            <p>Consúltalo con tu médico de confianza. No nos podemos hacer responsables de alguna complicación.<br>
-	              </p>
-		</article>
+			  <h2 class="col1">Si sufro de algún padecimiento medico, Me puedo tatuar?</h2>
+	            <p class= "faq_art_div2">Consúltalo con tu médico de confianza. No nos podemos hacer responsables de alguna complicación.
+	              </p></div> 
+			</div>
+		</article>				
 		<article  id="instafeed" class="article1ig">
 		  <h1>·Instagram·</h1>
 		</article>
-		<article> </article>
+		
 	</main>
 	
-	<footer style="background: #000000">
-		<img src="Images/soy_feliz-dedo-1_soy_feliz dedo_1.svg" alt="soy feliz" width="200" height="200" class="dedo" style="alignment-baseline:center">
+	<footer style="background: hsla(0,0%,0%,1.00); padding-top: 50px;">
+		<img src="Images/soy_feliz-dedo-1_soy_feliz dedo_1.svg" alt="soy feliz" width="200" height="200" class="dedo" style="alignment-baseline:center; background: hsla(0,0%,0%,0.05)">
 	</footer>
 	<script>
 $(document).ready(function(){
@@ -190,39 +255,62 @@ $(document).ready(function(){
   userFeed.run();
 </script>
 <script>
-	var vid = document.getElementById("bgvid");
-var pauseButton = document.querySelector("#soyf button");
+	( function() {
+      /* Variables */
+      var videoPlayer = document.getElementById( 'video-player' ),
+        video = videoPlayer.getElementsByClassName( 'fullscreen-bg__video' )[0],
+        playlist = videoPlayer.getElementsByClassName( 'fullscreen-bg__playlist' )[0],
+        source = video.getElementsByTagName( 'source' ),
+        linkList = [],
+        videoDirectory = '',
+        currentVideo = 0,
+        allLinks = playlist.children,
+        linkNumber = allLinks.length,
+        i, filename;
 
-if (window.matchMedia('(prefers-reduced-motion)').matches) {
-    vid.removeAttribute("autoplay");
-    vid.pause();
-    pauseButton.innerHTML = "Paused";
-}
+      /**
+       * Load and play video
+       * @param  int index Video index
+       */
+      function playVideo( index ) {
+        allLinks[index].classList.add( 'current-video' );
+        currentVideo = index;
 
-function vidFade() {
-  vid.classList.add("stopfade");
-}
+        source[2].src = videoDirectory + linkList[index] + '.webm';
+        source[1].src = videoDirectory + linkList[index] + '.webm';
+        source[0].src = videoDirectory + linkList[index] + '.webm';
 
-vid.addEventListener('ended', function()
-{
-// only functional if "loop" is removed 
-vid.pause();
-// to capture IE10
-vidFade();
-}); 
+        video.load();
+        video.play();
+      }
 
+      // Save all video sources from playlist
+      for ( i = 0; i < linkNumber; i++ ) {
+        filename = allLinks[i].href;
+        linkList[i] = filename.match( /([^\/]+)(?=\.\w+$)/ )[0];
+      }
 
-pauseButton.addEventListener("click", function() {
-  vid.classList.toggle("stopfade");
-  if (vid.paused) {
-    vid.play();
-    pauseButton.innerHTML = "Pause";
-  } else {
-    vid.pause();
-    pauseButton.innerHTML = "Paused";
-  }
-})
+      /**
+       * Play next video
+       */
+      video.addEventListener( 'ended', function () {
+        allLinks[currentVideo].classList.remove( 'current-video' );
+
+        nextVideo = currentVideo + 1;
+        if ( nextVideo >= linkNumber ) {
+          nextVideo = 0;
+        }
+
+        playVideo( nextVideo );
+      } );
+
+    } () );
+  
 		</script>
+		 <script src="https://tympanus.net/Development/ElasticSVGElements/js/classie.js"></script>
+<script src="https://tympanus.net/Development/ElasticSVGElements/js/snap.svg-min.js"></script>
+
+    <script  src="index.js"></script>
         <script src="js/vendor/modernizr-3.5.0.min.js"></script>
         <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-3.2.1.min.js"><\/script>')</script>
@@ -238,5 +326,6 @@ pauseButton.addEventListener("click", function() {
 		<style>
 		@import url("https://fonts.googleapis.com/css?family=Varela+Round");
 		</style>
-    </body>
+   
+	</body>
 </html>
