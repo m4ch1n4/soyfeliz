@@ -37,7 +37,7 @@
    
 		<!-- Add your site or application content here -->
 		
-	<header class="header">
+	<!--<header class="header">
 		  
 		<nav class="nav2">
 		<ul>
@@ -59,18 +59,26 @@
 			  <li class="buting navinsta"> <strong>Instagram</strong> </li>
 		</ul>
 		</nav>
-</header>
-
-	<main class="mainw">
-		
-
-<!--<video id="bgvid" playsinline autoplay muted loop>
+</header> -->
+<div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <a href="#">About</a>
+  <a href="#">Services</a>
+  <a href="#">Clients</a>
+  <a href="#">Contact</a>
+</div>
+	
+<nav style="font-size:30px;cursor:pointer" onclick="openNav()"> <img src="Images/logo_grande_azul.svg" alt="" width="100px" class="navhome"> </nav>		
+<main class="mainw" id="main">
+	<div class="video">
+<video id="bgvid" playsinline autoplay muted loop>
   WCAG general accessibility recommendation is that media such as background video play through only once. Loop turned on for the purposes of illustration; if removed, the end of the video will fade in the same way created by pressing the "Pause" button  
 <source src="../vid2.m4v" type="video/webm">
-</video> -->
-
+</video> 
+</div>
 		<article class="mainw article1artist ">
-		  <h1>·Artist·</h1>
+		  <h1 align="center">·Artist·</h1>
+			<div class="jlkj" width="300px">
 			<div class="grid-container-arts">
 			<div class=" item1"><span><img src="http://www.soyfelizstudio.com/pablo.jpg" alt="paibol" width="90%"><h1>Pablo Diaz gordoa</h1></span></div>
 			<div class=" item2"><span><img src="http://www.soyfelizstudio.com/alan.jpg" alt="alan" width="90%"><h1>Alan Shepard</h1></span></div>
@@ -78,7 +86,8 @@
 			<div class=" item4"><span><img src="http://www.soyfelizstudio.com/alan.jpg" alt="alan" width="90%"><h1>Ximena R.E.</h1></span></div>
 			<div class=" item5"><span><img src="http://www.soyfelizstudio.com/alan.jpg" alt="alan" width="90%"><h1>Rubén Morales</h1></span></div>
 			<div class=" item6"><span><img src="http://www.soyfelizstudio.com/alan.jpg" alt="alan" width="83.6%"><h1>Fher Val</h1></span></div>
-			</div>	
+			</div>
+			</div>
 		</article>
 	
 		
@@ -128,11 +137,9 @@
 				  <p>Descripción:<textarea rows="10" required="required" wrap="soft" placeholder="Write your text"></textarea></p>
 						<p>Referencia: ("jpg" ,"png","pdf")
 				    <input type="file" name="entry.1881943265"></p>
-						<p><input type="checkbox"> He leido el <a href="#myPopup" data-rel="popup">Show Popup</a>
-    
-    <div data-role="popup" id="myPopup">
-      <iframe src="aviso de privasidad.html" frameborder="20em"></iframe>
-    </div>
+						<p><input type="checkbox"> He leido el <div class="popup" onclick="myFunction()">aviso de privasidad
+  <span class="popuptext" id="myPopup"><iframe src="aviso de privasidad.html" frameborder="0"></iframe></span>
+</div>
 </p>
 			  <p> <input type="checkbox"> Tengo mas de 18 años de edad.</p>
 					</legend>
@@ -208,8 +215,11 @@
 		
 	</main>
 	
-	<footer style="background: hsla(0,0%,0%,1.00); padding-top: 50px;">
-		<img src="Images/soy_feliz-dedo-1_soy_feliz dedo_1.svg" alt="soy feliz" width="200" height="200" class="dedo" style="alignment-baseline:center; background: hsla(0,0%,0%,0.05)">
+	<footer style="background: hsla(0,0%,0%,1.00); padding-top: 90px; height:900px;">
+		<div class="hjfoot">
+		<img src="Images/soy_feliz-dedo-1_soy_feliz dedo_1.svg" alt="soy feliz" width="200" height="200" align="center" class="dedo" style="alignment-baseline: center; background: hsla(0,0%,0%,0.05); margin-top: 12%; margin-right: 12%; margin-left: 12%; margin-bottom: 12%; float: none; top: center; left: -35%; padding-left: 0px;">
+		<p align="center" class="dedfd" >soy feliz©</p>
+		</div> 
 	</footer>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
 <script>
@@ -326,6 +336,26 @@ $(document).ready(function(){
             ga('create','UA-XXXXX-Y','auto');ga('send','pageview')
         </script>
         <script src="https://www.google-analytics.com/analytics.js" async defer></script>
+<script>
+function openNav() {
+    document.getElementById("mySidenav").style.width = "250px";
+    document.getElementById("main").style.marginLeft = "250px";
+    document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
+}
+
+function closeNav() {
+    document.getElementById("mySidenav").style.width = "0";
+    document.getElementById("main").style.marginLeft= "0";
+    document.body.style.backgroundColor = "white";
+}
+</script>
+<script>
+// When the user clicks on div, open the popup
+function myFunction() {
+    var popup = document.getElementById("myPopup");
+    popup.classList.toggle("show");
+}
+</script>
 		<style>
 		@import url("https://fonts.googleapis.com/css?family=Varela+Round");
 		</style>

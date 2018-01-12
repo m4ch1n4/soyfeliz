@@ -97,8 +97,114 @@ textarea {
 /* ==========================================================================
    Author's custom styles
    ========================================================================== */
+body {
+   
+    transition: background-color .5s;
+}
 
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
 
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+
+.sidenav a:hover {
+    color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+#main {
+    transition: margin-left .5s;
+    padding-top: 0px;
+    padding-right: 0px;
+    padding-left: 0px;
+    padding-bottom: 0px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+
+/* Popup container - can be anything you want */
+.popup {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+/* The actual popup */
+.popup .popuptext {
+    visibility: hidden;
+    width: 325px;
+    background-color: #555;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 8px 0;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%;
+    left: 50%;
+    margin-left: -80px;
+}
+
+/* Popup arrow */
+.popup .popuptext::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #555 transparent transparent transparent;
+}
+
+/* Toggle this class - hide and show the popup */
+.popup .show {
+    visibility: visible;
+    -webkit-animation: fadeIn 1s;
+    animation: fadeIn 1s;
+}
+
+/* Add animation (fade in the popup) */
+@-webkit-keyframes fadeIn {
+    from {opacity: 0;} 
+    to {opacity: 1;}
+}
+
+@keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity:1 ;}
+}
 iframe {
     border: none;
 }  
@@ -344,7 +450,10 @@ body { height: 100%; }
     padding-bottom: 4px;
     border-radius: 113px;
     background-origin: padding-box;
-    background-color: hsla(0,18%,4%,1.00);
+    background-color: hsla(0,0%,100%,0.86);
+    opacity: 0.8;
+    position: fixed;
+    left: 1%;
 }
 .omg {
     width: 203px;
@@ -442,11 +551,16 @@ body { height: 100%; }
 }
 
 .grid-container-faq {
-  display: grid;
-  grid-template-columns: auto auto ;
-  grid-gap: 50px;
-  padding: 20px;
-	
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-gap: 50px;
+    padding-top: 182px;
+    padding-right: 182px;
+    padding-left: 182px;
+    padding-bottom: 182px;
+    margin-left: -39px;
+    margin-right: 113px;
+    margin-bottom: 0px;
 }
 
 .grid-container-faq > div {
@@ -480,6 +594,11 @@ body { height: 100%; }
     font-size: small;
     font-family: karma;
     line-height: 173%;
+    padding-right: 0px;
+    padding-left: 0px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    margin-right: -155px;
 }
 
 /* instagram */	
@@ -507,10 +626,11 @@ body { height: 100%; }
     padding-left: 20px;
     padding-right: 20px;
     padding-bottom: 20px;
-    margin-left: 41%;
+    margin-left: 13%;
     min-height: 10em;
     max-height: 45em;
-    height: 32em; }
+    height: 32em;
+}
 
 
 
@@ -691,4 +811,21 @@ body { height: 100%; }
     h3 {
         page-break-after: avoid;
     }
+}
+.jlkj {
+    margin: center;
+    width: 101%;
+    position: center;
+    top: center;
+    padding-left: 93px;
+    padding-right: 0px;
+}
+.dedfd {
+    margin-top: -232px;
+}
+.hjfoot {
+}
+.video {
+    height: 268%;
+    margin-bottom: 588px;
 }
