@@ -13,6 +13,11 @@
 
         <link rel="stylesheet" href="css/normalize.css">
         <link rel="stylesheet" href="css/main.css">
+		<link rel="stylesheet" href="https://code.jquery.com/mobile/[version]/jquery.mobile-[version].min.css">
+   <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+<script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+<script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+
 	
 		
 		<title>Soy feliz Studio</title>
@@ -23,19 +28,8 @@
 
     </head>
     <body>
-	<div id="video-player" class="fullscreen-bg container-fluid">
-    <video class="fullscreen-bg__video" autoplay="" muted="" poster="">
-      <source src="www.soyfeliz.com/VID4.webm" type="video/webm">
-      <source src="www.soyfeliz.com/VID4.webm" type="video/webm">
-      <source src="www.soyfeliz.com/VID4.webm" type="video/webm">
-    </video>
-    <div class="fullscreen-bg__playlist">
+	
 
-      <a href="www.soyfeliz.com/VID2.webm" class=""></a>
-      <a href="www.soyfeliz.com/VID3.webm" class=""></a>
-      <a href="www.soyfeliz.com/VID4.webm" class="current-video"></a>
-    </div>
-  </div>
         <!--[if lte IE 9]>
             <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
         <![endif]-->
@@ -134,7 +128,12 @@
 				  <p>Descripción:<textarea rows="10" required="required" wrap="soft" placeholder="Write your text"></textarea></p>
 						<p>Referencia: ("jpg" ,"png","pdf")
 				    <input type="file" name="entry.1881943265"></p>
-						<p><input type="checkbox"> He leido el Aviso de Privasidad.</p>
+						<p><input type="checkbox"> He leido el <a href="#myPopup" data-rel="popup">Show Popup</a>
+    
+    <div data-role="popup" id="myPopup">
+      <iframe src="aviso de privasidad.html" frameborder="20em"></iframe>
+    </div>
+</p>
 			  <p> <input type="checkbox"> Tengo mas de 18 años de edad.</p>
 					</legend>
 					
@@ -212,6 +211,60 @@
 	<footer style="background: hsla(0,0%,0%,1.00); padding-top: 50px;">
 		<img src="Images/soy_feliz-dedo-1_soy_feliz dedo_1.svg" alt="soy feliz" width="200" height="200" class="dedo" style="alignment-baseline:center; background: hsla(0,0%,0%,0.05)">
 	</footer>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+<script>
+
+// popup examples
+$( document ).on( "pagecreate", function() {
+    // The window width and height are decreased by 30 to take the tolerance of 15 pixels at each side into account
+    function scale( width, height, padding, border ) {
+        var scrWidth = $( window ).width() - 30,
+            scrHeight = $( window ).height() - 30,
+            ifrPadding = 2 * padding,
+            ifrBorder = 2 * border,
+            ifrWidth = width + ifrPadding + ifrBorder,
+            ifrHeight = height + ifrPadding + ifrBorder,
+            h, w;
+        if ( ifrWidth < scrWidth && ifrHeight < scrHeight ) {
+            w = ifrWidth;
+            h = ifrHeight;
+        } else if ( ( ifrWidth / scrWidth ) > ( ifrHeight / scrHeight ) ) {
+            w = scrWidth;
+            h = ( scrWidth / ifrWidth ) * ifrHeight;
+        } else {
+            h = scrHeight;
+            w = ( scrHeight / ifrHeight ) * ifrWidth;
+        }
+        return {
+            'width': w - ( ifrPadding + ifrBorder ),
+            'height': h - ( ifrPadding + ifrBorder )
+        };
+    };
+    $( ".ui-popup iframe" )
+        .attr( "width", 0 )
+        .attr( "height", "auto" );
+    $( "#popupVideo" ).on({
+        popupbeforeposition: function() {
+            // call our custom function scale() to get the width and height
+            var size = scale( 497, 298, 15, 1 ),
+                w = size.width,
+                h = size.height;
+            $( "#popupVideo iframe" )
+                .attr( "width", w )
+                .attr( "height", h );
+        },
+        popupafterclose: function() {
+            $( "#popupVideo iframe" )
+                .attr( "width", 0 )
+                .attr( "height", 0 );
+        }
+    });
+});
+CSS click to expand contents
+
+
+
+</script>
 	<script>
 $(document).ready(function(){
   // Add smooth scrolling to all links
@@ -255,57 +308,7 @@ $(document).ready(function(){
   userFeed.run();
 </script>
 <script>
-	( function() {
-      /* Variables */
-      var videoPlayer = document.getElementById( 'video-player' ),
-        video = videoPlayer.getElementsByClassName( 'fullscreen-bg__video' )[0],
-        playlist = videoPlayer.getElementsByClassName( 'fullscreen-bg__playlist' )[0],
-        source = video.getElementsByTagName( 'source' ),
-        linkList = [],
-        videoDirectory = '',
-        currentVideo = 0,
-        allLinks = playlist.children,
-        linkNumber = allLinks.length,
-        i, filename;
-
-      /**
-       * Load and play video
-       * @param  int index Video index
-       */
-      function playVideo( index ) {
-        allLinks[index].classList.add( 'current-video' );
-        currentVideo = index;
-
-        source[2].src = videoDirectory + linkList[index] + '.webm';
-        source[1].src = videoDirectory + linkList[index] + '.webm';
-        source[0].src = videoDirectory + linkList[index] + '.webm';
-
-        video.load();
-        video.play();
-      }
-
-      // Save all video sources from playlist
-      for ( i = 0; i < linkNumber; i++ ) {
-        filename = allLinks[i].href;
-        linkList[i] = filename.match( /([^\/]+)(?=\.\w+$)/ )[0];
-      }
-
-      /**
-       * Play next video
-       */
-      video.addEventListener( 'ended', function () {
-        allLinks[currentVideo].classList.remove( 'current-video' );
-
-        nextVideo = currentVideo + 1;
-        if ( nextVideo >= linkNumber ) {
-          nextVideo = 0;
-        }
-
-        playVideo( nextVideo );
-      } );
-
-    } () );
-  
+	
 		</script>
 		 <script src="https://tympanus.net/Development/ElasticSVGElements/js/classie.js"></script>
 <script src="https://tympanus.net/Development/ElasticSVGElements/js/snap.svg-min.js"></script>
