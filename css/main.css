@@ -97,64 +97,6 @@ textarea {
 /* ==========================================================================
    Author's custom styles
    ========================================================================== */
-body {
-   
-    transition: background-color .5s;
-}
-
-.sidenav {
-    height: 100%;
-    width: 0;
-    position: fixed;
-    z-index: 1;
-    top: 0;
-    left: 0;
-    background-color: #111;
-    overflow-x: hidden;
-    transition: 0.5s;
-    padding-top: 60px;
-    font-family: "Weston Light Free";
-    color: rgba(255,255,255,1.00);
-    text-align: left;
-    text-shadow: 0px 0px;
-}
-
-.sidenav a {
-    padding: 8px 8px 8px 32px;
-    text-decoration: none;
-    font-size: 25px;
-    color: #818181;
-    display: block;
-    transition: 0.3s;
-}
-
-.sidenav a:hover {
-    color: rgba(252,0,4,0.60);
-}
-
-.sidenav .closebtn {
-    position: absolute;
-    top: 0;
-    right: 25px;
-    font-size: 36px;
-    margin-left: 50px;
-}
-
-#main {
-    transition: margin-left .5s;
-    padding-top: 0px;
-    padding-right: 0px;
-    padding-left: 0px;
-    padding-bottom: 0px;
-}
-
-@media screen and (max-height: 450px) {
-  .sidenav {
-    padding-top: 15px;
-    color: rgba(255,255,255,1.00);
-}
-  .sidenav a {font-size: 18px;}
-}
 
 /* Popup container - can be anything you want */
 .popup {
@@ -216,19 +158,13 @@ iframe {
     border: none;
 }  
 
-
-
-
-
-
-
-
-
-
 body {
   margin: 0;
   background-color: whitesmoke;
-}/* header styles nav*/
+	}
+
+
+/* header outuse styles nav
 .header {
     align-items: baseline;
     position: fixed;
@@ -401,6 +337,8 @@ body { height: 100%; }
     background-position: 100% 0;
   }
 }
+
+
 .nav1    {
     margin-top: -110px;
     float: none;
@@ -446,23 +384,7 @@ body { height: 100%; }
     padding-right: 10px;
     margin-left: -198px;
 }
-.navhome {
-    align-content: left;
-    margin-top: 23px;
-    width: 152px;
-    height: 152px;
-    padding-top: 4px;
-    padding-left: 4px;
-    padding-right: 4px;
-    padding-bottom: 4px;
-    border-radius: 113px;
-    background-origin: padding-box;
-    background-color: hsla(0,0%,100%,0.86);
-    opacity: 0.8;
-    position: fixed;
-    left: 1%;
-    color: rgba(248,248,248,0.05);
-}
+
 .omg {
     width: 203px;
     min-width: 0px;
@@ -482,8 +404,101 @@ body { height: 100%; }
     top: center;
     border-radius: 145px;
 }
+*/
+
+/* header*/
+
+.navhome {
+    align-content: left;
+    margin-top: 23px;
+    width: 152px;
+    height: 152px;
+    padding-top: 4px;
+    padding-left: 4px;
+    padding-right: 4px;
+    padding-bottom: 4px;
+    border-radius: 113px;
+    background-origin: padding-box;
+    background-color: hsla(0,0%,100%,0.86);
+    opacity: 0.8;
+    position: fixed;
+    left: 1%;
+    color: rgba(248,248,248,0.05);
+}
+body {
+   
+    transition: background-color .5s;
+}
+#contacto .divcont .grid-container-form {
+}
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+    font-family: "Weston Light Free";
+    color: rgba(255,255,255,1.00);
+    text-align: left;
+    text-shadow: 0px 0px;
+}
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+.sidenav a:hover {
+    color: rgba(252,0,4,0.60);
+}
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+#main {
+    transition: margin-left .5s;
+    padding-top: 0px;
+    padding-right: 0px;
+    padding-left: 0px;
+    padding-bottom: 0px;
+}
+@media screen and (max-height: 450px) {
+  .sidenav {
+    padding-top: 15px;
+    color: rgba(255,255,255,1.00);
+}
+  .sidenav a {font-size: 18px;}
+}
+
 /*main articles*/
 
+/* video*/
+.jlkj {
+    margin: center;
+    width: 41%;
+    position: center;
+    top: center;
+    padding-left: 93px;
+    padding-right: 0px;
+}
+
+.video {
+    height: 268%;
+    margin-bottom: 588px;
+}
+
+
+/* artist css*/
 .article1artist{
     background: #000000;
     text-align: center;
@@ -497,11 +512,11 @@ body { height: 100%; }
 
 
 .grid-container-arts {
-  display: grid;
-  grid-template-columns: auto auto ;
-  grid-gap: 50px;
-  padding: 50px;
-	
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-gap: 50px;
+    padding: 50px;
+    width: 67%;
 }
 
 .grid-container-arts > div {
@@ -510,6 +525,20 @@ body { height: 100%; }
     font-size: 9px;
     line-height: 655%;
 }
+.pclass{
+    font-style: normal;
+    font-weight: lighter;
+    line-height: 130%;
+    font-size: small;
+    text-indent: 37px;
+    font-family: Arvo;
+    text-align: right;
+    margin-left: 55px;
+    margin-top: -29px;
+}
+
+/* press css*/
+
 .article1press{
     background: #000000;
     text-align: center;
@@ -517,34 +546,86 @@ body { height: 100%; }
     margin-top: -25px;
     padding-top: 20px;
 }
+
+/* contact css*/
 .article1contact{
-    font-family: 'Helvetica Neue', Helvetica, Arial, 'sans-serif';
+    font-family: 'Quicksand Regular',Helvetica, Arial,'sans-serif';
     background: white;
     text-align: center;
-    color: #00000;
+    color: #000000;
     padding-top: 0px;
     padding-right: 50px;
     padding-bottom: 20px;
     padding-left: 50px;
+    margin-top: -22px;
 }
 
-.forma p input textarea{
-    font-family: 'Montserrat Light';
+.divcont{
+    font-family: "Quicksand Regular";
+    align-content: center;
+    width: 741px;
+    height: 710px;
+    margin-left: 94px;
 }
-
-.grid-container-form {
-  display: grid;
-  grid-template-columns: auto auto ;
-  grid-gap: 50px;
-  padding: 20px;
+.divconhed{
+    align-items: center;
+    height: 150px;
+    width: 250px;
+}
+.spancont {
+    width: 172px;
+    height: 50px;
+    float: left;
+    margin-top: 44px;
+}
+.hed_div_text{
 	
+}
+.hed_div_icon{
+    margin-left: -101px;	
+}
+.head_div_phone{
+    width: 201px;
+    height: 28px;
+    display: block;
+    margin-left: 78px;
+    margin-top: -40px;
+}
+
+.field_setA{
+    width: 600px;
+    height: 900px;
+    float: left;
+    text-align: left;
+}
+
+.field_setb {
+    width: 600px;
+    height: 900px;
+    float: right; 
+	text-align: left;
+}
+
+
+.grid-container-form  {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-gap: 10px;
+    padding: 10px;
+    width: 545px;
 }
 
 .grid-container-form > div {
-  text-align: center;
-  padding: 20px 0;
-  font-size: 12px;
+    text-align: left;
+    padding: 20px 20px 20px;
+    font-size: 9px;
+    line-height: 655%;
 }
+
+
+
+/* FAQS css*/
+
 .article1faq {
     background: #000000;
     color: #FFFFFF;
@@ -629,6 +710,21 @@ body { height: 100%; }
     margin-top: -4px;
 }
 
+/* ubicacion css*/
+      #map {
+        height: 100%;
+      }
+
+.articleubi{
+    background: #000000;
+    text-align: center;
+    color: #F9F5F5;
+    padding-top: 55px;
+    margin-top: -4px;
+	height: 90em;
+		
+}
+
 /* footer styles*/
 
 .dedo {
@@ -642,8 +738,23 @@ body { height: 100%; }
     max-height: 45em;
     height: 32em;
 }
+.dedfd {
+    margin-top: -232px;
+    color: rgba(255,255,255,1.00);
+    text-shadow: 0px 0px none;
+    font-size: large;
+    font-weight: lighter;
+    line-height: -146%;
+    font-style: normal;
+    word-spacing: 88%;
+    white-space: pre-line;
+    letter-spacing: 243%;
+}
 
-
+.hjfoot {
+	margin-top: -3;
+	
+}
 
 /* ==========================================================================
    Helper classes
@@ -728,8 +839,6 @@ body { height: 100%; }
 .clearfix:after {
     clear: both;
 }
-.nav2 ul .buting {
-}
 
 /* ==========================================================================
    EXAMPLE Media Queries for Responsive Design.
@@ -737,9 +846,12 @@ body { height: 100%; }
    Modify as content requires.
    ========================================================================== */
 
-@media only screen and (min-width: 35em) {
+@media only screen and (min-width : 35.000em ){
     /* Style adjustments for viewports that meet the condition */
 }
+
+
+
 
 @media print,
        (-webkit-min-device-pixel-ratio: 1.25),
@@ -824,30 +936,4 @@ body { height: 100%; }
     h3 {
         page-break-after: avoid;
     }
-}
-.jlkj {
-    margin: center;
-    width: 101%;
-    position: center;
-    top: center;
-    padding-left: 93px;
-    padding-right: 0px;
-}
-.dedfd {
-    margin-top: -232px;
-    color: rgba(255,255,255,1.00);
-    text-shadow: 0px 0px none;
-    font-size: large;
-    font-weight: lighter;
-    line-height: -146%;
-    font-style: normal;
-    word-spacing: 88%;
-    white-space: pre-line;
-    letter-spacing: 243%;
-}
-.hjfoot {
-}
-.video {
-    height: 268%;
-    margin-bottom: 588px;
 }
