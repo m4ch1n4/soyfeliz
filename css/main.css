@@ -81,6 +81,8 @@ fieldset {
 
 textarea {
     resize: vertical;
+    -webkit-box-shadow: 0px 0px 0% none;
+    box-shadow: 0px 0px 0% none;
 }
 
 /* ==========================================================================
@@ -107,6 +109,9 @@ textarea {
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
+    width: 211px;
+    height: 0px;
+    margin-left: 3px;
 }
 
 /* The actual popup */
@@ -563,14 +568,36 @@ body {
 .divcont{
     font-family: "Quicksand Regular";
     align-content: center;
-    width: 741px;
-    height: 710px;
-    margin-left: 94px;
+    width: 1032px;
+    height: 496px;
+    margin-left: 154px;
+    border-bottom-style: solid;
+    border-bottom-color: #000000;
 }
 .divconhed{
     align-items: center;
     height: 150px;
     width: 250px;
+}
+.leg_a {
+    border-left-color: #000000;
+    border-left-style: none;
+    border-right-style: solid;
+    border-right-color: #000000;
+    border-spacing: 21px 83px;
+    padding-right: 58px;
+    font-family: "Quicksand Regular";
+}
+.leg_b {
+    border-bottom-style: none;
+    margin-left: -125px;
+    margin-right: -319px;
+}
+.divsend{
+    margin-top: -474px;
+    width: 50px;
+    height: 50px;
+    margin-left: 531px;
 }
 .spancont {
     width: 172px;
@@ -591,20 +618,39 @@ body {
     margin-left: 78px;
     margin-top: -40px;
 }
-
+.popups {
+    margin-top: -280px;
+}
 .field_setA{
     width: 600px;
     height: 900px;
     float: left;
     text-align: left;
+    border-right-color: #000000;
+    border-right-style: solid;
+    font-family: "Quicksand Regular";
+}
+.radiof {
+    position: relative;
+    display: marker;
+    margin-left: 58px;
+    margin-top: -37px;
 }
 
+input{
+    border-left: none;
+    border-right: none;
+    border-bottom: thin inset black;
+    border-top: none;
+}
 .field_setb {
     width: 600px;
     height: 900px;
     float: right;
     text-align: left;
-    font-family: Arvo;
+    font-family: "Quicksand Regular";
+    border-left-color: #000000;
+    border-left-style: solid;
 }
 
 
@@ -618,9 +664,13 @@ body {
 
 .grid-container-form > div {
     text-align: left;
-    padding: 20px 20px 20px;
+    padding-right: 20px;
+    padding-left: 20px;
+    padding-bottom: 20px;
     font-size: 9px;
     line-height: 655%;
+    margin-top: -487px;
+    margin-left: 539px;
 }
 
 

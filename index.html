@@ -109,7 +109,7 @@
 		<article id="contacto" class="article1contact">
 		  <h1>·Contacto·</h1>
 		  <div class="divcont">
-		    <form action="form.php" method="POST" class="grid-container-form">
+		    <form action="" method="" class="grid-container-form">
 		     
 			  <fieldset class="field_setA">
 		        	<legend class="leg_a item1">
@@ -120,10 +120,10 @@
 		          <input name="" type="text" required="required" placeholder="Last Name" autocomplete="on">
 	            </p>
 		        		<p>
-		          <input  name="" type="checkbox">
+		          <input  name="" type="radio">
 		          M</p>
-		        		<p>
-		          <input type="checkbox" name="">
+		        		<p class="radiof">
+		          <input type="radio" name="">
 		          F</p>
 		        		<p> Teléfono:
 		          <input type="tel" required="required" placeholder="Telephone Number" autocomplete="on" size="10" maxlength="10">
@@ -156,24 +156,28 @@
 		          <input type="text" placeholder="What size?">
 	            </p>
 		        		<p>Descripción:
-		          <textarea rows="10" required="required" wrap="soft" placeholder="Write your text"></textarea>
+		          <textarea rows="5" required="required" wrap="soft" placeholder="Write your text"></textarea>
 	            </p>
 		       			<p>Referencia: ("jpg" ,"png","pdf")
-		          <input type="file" name="entry.1881943265">
+		          <input type="file" name="">
 	            </p>
 		        		<p>
-		          <input type="checkbox">
-		          He leido el 
-	            <div class="popup" onclick="myFunction()">aviso de privasidad <span class="popuptext" id="myPopup">
+		          <input  type="checkbox">
+		          He leido el <a class="popup" onclick="myFunction()">aviso de privasidad <span class="popuptext" id="myPopup">
 		            <iframe src="aviso de privasidad.html" frameborder="0"></iframe>
-		            </span></div>
+		            </span></a>
 		        </p>
 		        		<p>
 		          <input type="checkbox">
 		          Tengo mas de 18 años de edad.</p>
 		        </legend>
 	          </fieldset>
-		             	<input type="submit">
+			<div class="divsend">
+		             	<input class="popups" onclick="myFunctions()" type="submit">
+			<span class="popuptext" id="resd">
+		
+		    </span>
+				</div>
 	        </form>
 <div class="divconhed">
 			  <span class="hed_div_text">									
@@ -664,7 +668,7 @@ $( document ).on( "pagecreate", function() {
         }
     });
 });
-CSS click to expand contents
+
 
 
 
@@ -750,7 +754,13 @@ function myFunction() {
     popup.classList.toggle("show");
 }
 </script>
-		
+		<script>
+// When the user clicks on div, open the popup
+function myFunctions() {
+    var popup = document.getElementById("resd");
+    popup.classList.toggle("show");
+}
+</script>
    
 	</body>
 </html>
