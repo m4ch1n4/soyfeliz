@@ -59,7 +59,7 @@
   <a href="#press">·Prensa·</a>
   <a href="#contacto">·Contacto·</a>
   <a href="#faqs">·FAQS·</a>
-  <a href="#">·Ubicación·</a>
+  <a href="#ubicacion">·Ubicación·</a>
   <a href="#instafeed">·Instagram·</a>
 </div>
 	
@@ -242,27 +242,369 @@
 		<article  id="instafeed" class="article1ig">
 		  <h1>·Instagram·</h1>
 		</article>
-		<article id="ubicación" class="articleubi">
+		<article id="ubicacion" class="articleubi">
 			<h1> ·Ubicación· </h1>
-			<div id="map"></div>
+ <div class="himap" style="width: 711px; height: 388px; float: none; z-index: 1; padding-top: 20px; padding-right: 20px; padding-left: 20px; margin-top: 42px; margin-right: 542px; margin-left: 228px; display: block; position: relative;" id="map"></div>
     <script>
-      var map;
-      function initMap() {
-        map = new google.maps.Map(document.getElementById('map'), {
-          center: {lat: 19.581826393051138, lng: -98.94515705156253},
-          zoom: 12
+  function initMap() {
+        var Soyfeliz_s = {lat: 19.419142055598304, lng: -99.15939045000005};
+		  var styledMapType = new google.maps.StyledMapType ( [
+  {
+    "elementType": "geometry",
+    "stylers": [
+      {
+        "color": "#212121"
+      },
+      {
+        "visibility": "simplified"
+      }
+    ]
+  },
+  {
+    "elementType": "geometry.fill",
+    "stylers": [
+      {
+        "color": "#00000"
+      },
+      {
+        "visibility": "on"
+      }
+    ]
+  },
+  {
+    "elementType": "geometry.stroke",
+    "stylers": [
+      {
+        "color": "#ffffff"
+      },
+      {
+        "visibility": "on"
+      }
+    ]
+  },
+  {
+    "elementType": "labels.icon",
+    "stylers": [
+      {
+        "saturation": -100
+      },
+      {
+        "lightness": 45
+      },
+      {
+        "visibility": "off"
+      },
+      {
+        "weight": 3.5
+      }
+    ]
+  },
+  {
+    "elementType": "labels.text.fill",
+    "stylers": [
+      {
+        "color": "#757575"
+      },
+      {
+        "lightness": 100
+      }
+    ]
+  },
+  {
+    "elementType": "labels.text.stroke",
+    "stylers": [
+      {
+        "color": "#212121"
+      }
+    ]
+  },
+  {
+    "featureType": "administrative",
+    "elementType": "geometry",
+    "stylers": [
+      {
+        "color": "#757575"
+      }
+    ]
+  },
+  {
+    "featureType": "administrative.country",
+    "elementType": "labels.text.fill",
+    "stylers": [
+      {
+        "color": "#9e9e9e"
+      }
+    ]
+  },
+  {
+    "featureType": "administrative.land_parcel",
+    "stylers": [
+      {
+        "visibility": "off"
+      }
+    ]
+  },
+  {
+    "featureType": "administrative.locality",
+    "elementType": "labels.icon",
+    "stylers": [
+      {
+        "visibility": "on"
+      }
+    ]
+  },
+  {
+    "featureType": "administrative.locality",
+    "elementType": "labels.text.fill",
+    "stylers": [
+      {
+        "color": "#bdbdbd"
+      }
+    ]
+  },
+  {
+    "featureType": "poi",
+    "elementType": "labels.icon",
+    "stylers": [
+      {
+        "lightness": -45
+      },
+      {
+        "visibility": "simplified"
+      },
+      {
+        "weight": 6.5
+      }
+    ]
+  },
+  {
+    "featureType": "poi",
+    "elementType": "labels.text.fill",
+    "stylers": [
+      {
+        "color": "#757575"
+      }
+    ]
+  },
+  {
+    "featureType": "poi.government",
+    "elementType": "labels.icon",
+    "stylers": [
+      {
+        "visibility": "on"
+      }
+    ]
+  },
+  {
+    "featureType": "poi.park",
+    "elementType": "geometry",
+    "stylers": [
+      {
+        "color": "#181818"
+      }
+    ]
+  },
+  {
+    "featureType": "poi.park",
+    "elementType": "labels.text.fill",
+    "stylers": [
+      {
+        "color": "#616161"
+      }
+    ]
+  },
+  {
+    "featureType": "poi.park",
+    "elementType": "labels.text.stroke",
+    "stylers": [
+      {
+        "color": "#1b1b1b"
+      }
+    ]
+  },
+  {
+    "featureType": "road",
+    "stylers": [
+      {
+        "color": "#00000"
+      }
+    ]
+  },
+  {
+    "featureType": "road",
+    "elementType": "geometry.fill",
+    "stylers": [
+      {
+        "color": "#2c2c2c"
+      }
+    ]
+  },
+  {
+    "featureType": "road",
+    "elementType": "geometry.stroke",
+    "stylers": [
+      {
+        "visibility": "on"
+      }
+    ]
+  },
+  {
+    "featureType": "road",
+    "elementType": "labels.text.fill",
+    "stylers": [
+      {
+        "color": "#8a8a8a"
+      },
+      {
+        "visibility": "on"
+      }
+    ]
+  },
+  {
+    "featureType": "road",
+    "elementType": "labels.text.stroke",
+    "stylers": [
+      {
+        "color": "#fffffff"
+      },
+      {
+        "visibility": "on"
+      }
+    ]
+  },
+  {
+    "featureType": "road.arterial",
+    "elementType": "geometry",
+    "stylers": [
+      {
+        "color": "#373737"
+      }
+    ]
+  },
+  {
+    "featureType": "road.highway",
+    "elementType": "geometry",
+    "stylers": [
+      {
+        "color": "#3c3c3c"
+      },
+      {
+        "visibility": "on"
+      }
+    ]
+  },
+  {
+    "featureType": "road.highway.controlled_access",
+    "elementType": "geometry",
+    "stylers": [
+      {
+        "color": "#4e4e4e"
+      }
+    ]
+  },
+  {
+    "featureType": "road.local",
+    "elementType": "labels.text.fill",
+    "stylers": [
+      {
+        "color": "#616161"
+      }
+    ]
+  },
+  {
+    "featureType": "transit",
+    "elementType": "labels.text.fill",
+    "stylers": [
+      {
+        "color": "#757575"
+      }
+    ]
+  },
+  {
+    "featureType": "water",
+    "elementType": "geometry",
+    "stylers": [
+      {
+        "color": "#000000"
+      }
+    ]
+  },
+  {
+    "featureType": "water",
+    "elementType": "labels.text.fill",
+    "stylers": [
+      {
+        "color": "#3d3d3d"
+      }
+    ]
+  }
+],
+	 {name: 'Styled Map'}	  
+		  );
+        var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 19,
+          center: Soyfeliz_s
+		 
+        });
+        var map = new google.maps.Map(document.getElementById('map'), {
+          center: Soyfeliz_s,
+          zoom: 19,
+          mapTypeControlOptions: {
+            mapTypeIds: ['roadmap', 'satellite', 'hybrid', 'terrain',
+                    'styled_map']
+          },
+	
+		  zoomControl: true,
+          scaleControl: true,
+		  mapTypeControl:false,
+		  streetViewControl:false,	
+
+        });   
+		  
+		map.mapTypes.set('styled_map', styledMapType);
+        map.setMapTypeId('styled_map');
+      
+        var contentString = '<div id="content">'+
+            '<div id="siteNotice">'+
+            '</div>'+
+            '<h1 style="color: rgba(0,0,0,1.00)" id="firstHeading" class="firstHeading">SoyFeliz Studio</h1>'+
+            '<div style="color: rgba(0,0,0,1.00); text-align: left" id="bodyContent">'+
+            '<p>Calle Tabasco 152 Int 202, ' +
+            ' Roma Norte, Roma Nte.,  '+
+            '06700 Cuauhtemoc, CDMX. '+
+            '<p><a id="soma" href="https://www.google.com.mx/maps/place/SoyFeliz+Studio/@19.4190345,-99.1593642,15z/data=!4m12!1m6!3m5!1s0x0:0x6a7c156214270194!2sSoyFeliz+Studio!8m2!3d19.4190345!4d-99.1593642!3m4!1s0x0:0x6a7c156214270194!8m2!3d19.4190345!4d-99.1593642">'+
+            'Ver en Google Maps</a> '+
+            '</p>'+
+            '</div>'+
+            '</div>';
+
+        var infowindow = new google.maps.InfoWindow({
+          content: contentString,
+          maxWidth: 200
+        });
+        
+		var image = 'http://soyfelizstudio.com/logo12.svg';
+        var marker = new google.maps.Marker({
+          position: Soyfeliz_s,
+          map: map,
+		 icon: image,	
+          title: 'SoyFeliz Studio'
+        });
+        marker.addListener('click', function() {
+          infowindow.open(map, marker);
         });
       }
     </script>
-    <script src="https://maps.googleapis.com/maps/api/staticmap?key=AIzaSyAdH63UrwzQra7X98N1Rb0R3O-Hs2iVz-k&center=19.581826393051138,-98.94515705156253&zoom=12&format=png&maptype=roadmap&style=element:geometry%7Ccolor:0x212121&style=element:labels.icon%7Cvisibility:off&style=element:labels.text.fill%7Ccolor:0x757575&style=element:labels.text.stroke%7Ccolor:0x212121&style=feature:administrative%7Celement:geometry%7Ccolor:0x757575&style=feature:administrative.country%7Celement:labels.text.fill%7Ccolor:0x9e9e9e&style=feature:administrative.land_parcel%7Cvisibility:off&style=feature:administrative.locality%7Celement:labels.text.fill%7Ccolor:0xbdbdbd&style=feature:poi%7Celement:labels.text.fill%7Ccolor:0x757575&style=feature:poi.park%7Celement:geometry%7Ccolor:0x181818&style=feature:poi.park%7Celement:labels.text.fill%7Ccolor:0x616161&style=feature:poi.park%7Celement:labels.text.stroke%7Ccolor:0x1b1b1b&style=feature:road%7Celement:geometry.fill%7Ccolor:0x2c2c2c&style=feature:road%7Celement:labels.text.fill%7Ccolor:0x8a8a8a&style=feature:road.arterial%7Celement:geometry%7Ccolor:0x373737&style=feature:road.highway%7Celement:geometry%7Ccolor:0x3c3c3c&style=feature:road.highway.controlled_access%7Celement:geometry%7Ccolor:0x4e4e4e&style=feature:road.local%7Celement:labels.text.fill%7Ccolor:0x616161&style=feature:transit%7Celement:labels.text.fill%7Ccolor:0x757575&style=feature:water%7Celement:geometry%7Ccolor:0x000000&style=feature:water%7Celement:labels.text.fill%7Ccolor:0x3d3d3d&size=480x360"
-    async defer></script>
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCRW4aF7w-ec_JS_C8MDoLTnVhA1YlhGUg&callback=initMap">
+    </script>
 
 	    </article>
 	</main>
 	
-	<footer style="background: hsla(0,0%,0%,1.00); padding-top: 90px; height:900px;">
+	<footer style="background: hsla(0,0%,0%,1.00); text-align: left padding-top: 90px; height:400px;">
 		<div class="hjfoot">
-		<img src="Images/soy_feliz-dedo-1_soy_feliz dedo_1.svg" alt="soy feliz" width="200" height="200" align="center" class="dedo" style="alignment-baseline: center; background: hsla(0,0%,0%,0.05); margin-top: 12%; margin-right: 12%; margin-left: 12%; margin-bottom: 12%; float: none; top: center; left: -35%; padding-left: 0px;">
+		<img src="Images/soy_feliz-dedo-1_soy_feliz dedo_1.svg" alt="soy feliz" width="200" height="200" align="center" class="dedo" style="alignment-baseline: center; background: hsla(0,0%,0%,0.05); float: none; top: center; left: -35%; padding-left: 0px;">
 		<p align="center" class="dedfd">© SoyFeliz Studio</p>
 		</div> 
 	</footer>
