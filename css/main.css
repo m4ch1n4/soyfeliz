@@ -435,6 +435,8 @@ body {
     transition: background-color .5s;
 }
 #contacto .divcont .grid-container-form {
+    margin-left: 124px;
+	align-content: center;
 }
 .sidenav {
     height: 100%;
@@ -563,41 +565,57 @@ body {
     padding-bottom: 20px;
     padding-left: 50px;
     margin-top: -22px;
+    display: block;
 }
 
+.wurt {
+    width: 364px;
+    margin-left: 0px;
+}
 .divcont{
     font-family: "Quicksand Regular";
     align-content: center;
-    width: 1032px;
-    height: 496px;
-    margin-left: 154px;
+    align-self: baseline center;
+    width: 1088px;
+    height: 865px;
+    margin-left: 121px;
     border-bottom-style: solid;
     border-bottom-color: #000000;
+    margin-bottom: -95px;
 }
 .divconhed{
     align-items: center;
-    height: 150px;
-    width: 250px;
+    height: 96px;
+    width: 249px;
+    margin-top: -399px;
+    margin-left: 65px;
 }
 .leg_a {
     border-left-color: #000000;
     border-left-style: none;
     border-right-style: solid;
     border-right-color: #000000;
-    border-spacing: 21px 83px;
-    padding-right: 58px;
+    border-spacing: 467px 0px;
     font-family: "Quicksand Regular";
+    height: 49.5%;
+    border-collapse: separate;
+    float: none;
+    display: block;
+    width: 71%;
 }
 .leg_b {
     border-bottom-style: none;
-    margin-left: -125px;
-    margin-right: -319px;
 }
 .divsend{
-    margin-top: -474px;
-    width: 50px;
-    height: 50px;
-    margin-left: 531px;
+    margin-top: -44px;
+    width: 164px;
+    height: 159px;
+    display: compact;
+    padding-top: 0px;
+    margin-bottom: 486px;
+    font-family: "Quicksand Regular";
+    padding-bottom: 0px;
+    margin-left: 288px;
 }
 .spancont {
     width: 172px;
@@ -609,17 +627,17 @@ body {
 	
 }
 .hed_div_icon{
-    margin-left: -101px;	
+    margin-bottom: -93px;
+    margin-top: 169px;
 }
 .head_div_phone{
-    width: 201px;
-    height: 28px;
-    display: block;
-    margin-left: 78px;
-    margin-top: -40px;
+    width: 274px;
+    display: inline;
+    margin-left: 200px;
+    margin-top: 25px;
 }
 .popups {
-    margin-top: -280px;
+   
 }
 .field_setA{
     width: 600px;
@@ -629,6 +647,7 @@ body {
     border-right-color: #000000;
     border-right-style: solid;
     font-family: "Quicksand Regular";
+    margin-right: -100px;
 }
 .radiof {
     position: relative;
@@ -636,12 +655,126 @@ body {
     margin-left: 58px;
     margin-top: -37px;
 }
+#name5{
+	width: 226px;
+    border-bottom: .07px solid #000000;
+    border-left: hidden;
+    border-right: hidden;
+    border-top: hidden;
+    border-collapse: collapse;
+    border-spacing: 51px 26px;
+	
+}
 
-input{
-    border-left: none;
-    border-right: none;
-    border-bottom: thin inset black;
-    border-top: none;
+#lasname5{
+	width: 248px;
+    border-bottom: .07px solid #000000;
+    border-left: hidden;
+    border-right: hidden;
+    border-top: hidden;
+    border-collapse: collapse;
+    border-spacing: 51px 26px;
+}
+#movil5{
+    width: 245px;
+    border-bottom: .07px solid #000000;
+    border-left: hidden;
+    border-right: hidden;
+    border-top: hidden;
+    border-collapse: collapse;
+    border-spacing: 51px 26px;
+	
+}
+#mail5{
+	width: 260px;
+    border-bottom: .07px solid #000000;
+    border-left: hidden;
+    border-right: hidden;
+    border-top: hidden;
+    border-collapse: collapse;
+    border-spacing: 51px 26px;
+}
+
+#nacimient{
+	width: 145px;
+    border-bottom: .07px solid #000000;
+    border-left: hidden;
+    border-right: hidden;
+    border-top: hidden;
+    border-collapse: collapse;
+    border-spacing: 51px 26px;
+}
+#direccion1{
+    width: 226px;
+    border-bottom: .07px solid #000000;
+    border-left: hidden;
+    border-right: hidden;
+    border-top: hidden;
+    border-collapse: collapse;
+    border-spacing: 51px 26px;
+    margin-left: 85px;
+    padding-top: 0px;
+    margin-top: -135px;
+}
+
+#direccion2{
+    width: 226px;
+    border-bottom: .07px solid #000000;
+    border-left: hidden;
+    border-right: hidden;
+    border-top: hidden;
+    border-collapse: collapse;
+    border-spacing: 51px 26px;
+    margin-left: 85px;	
+}
+
+#direccion3{
+    width: 226px;
+    border-bottom: .07px solid #000000;
+    border-left: hidden;
+    border-right: hidden;
+    border-top: hidden;
+    border-collapse: collapse;
+    border-spacing: 51px 26px;
+    margin-left: 85px;
+}
+
+#direccion_mosp {
+    margin-left: 71px;
+    margin-top: -222px;
+    display: marker;
+}
+
+#b_p{
+    width: 201px;
+    border-bottom: .07px solid #000000;
+    border-left: hidden;
+    border-right: hidden;
+    border-top: hidden;
+    border-collapse: collapse;
+    border-spacing: 51px 26px;
+    margin-left: -1px;
+}
+
+#sz{
+    width: 226px;
+    border-bottom: .07px solid #000000;
+    border-left: hidden;
+    border-right: hidden;
+    border-top: hidden;
+    border-collapse: collapse;
+    border-spacing: 51px 26px;
+    margin-left: -1px;
+}
+
+#seleccionar{
+    color: #000000;
+    font-family: "Quicksand Regular";
+    text-align: justify;
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;
+    opacity: 1;
+    width: 302px;
 }
 .field_setb {
     width: 600px;
@@ -651,6 +784,7 @@ input{
     font-family: "Quicksand Regular";
     border-left-color: #000000;
     border-left-style: solid;
+    border-width: 0%;
 }
 
 
@@ -659,21 +793,46 @@ input{
     grid-template-columns: auto auto;
     grid-gap: 10px;
     padding: 10px;
-    width: 545px;
+    width: 500px;
+    border-spacing: 28px 0px;
+    border-right-width: thin;
+    margin-left: 33px;
 }
 
 .grid-container-form > div {
     text-align: left;
-    padding-right: 20px;
-    padding-left: 20px;
-    padding-bottom: 20px;
+    padding-right: 0px;
+    padding-left: 0px;
+    padding-bottom: 0px;
     font-size: 9px;
     line-height: 655%;
-    margin-top: -487px;
-    margin-left: 539px;
+    margin-top: -565px;
+    padding-top: 0px;
+    font-family: "Quicksand Regular";
+    border-top-left-radius: 144px;
 }
-
-
+.dev{
+    border-bottom-color: #030303;
+    border-bottom-style: solid;
+    height: 455px;
+    margin-top: 105px;
+    width: 1161px;
+    margin-left: -17px;
+}
+	 .button {
+    background-color: white;
+    border: .1px solid #000000;
+    color: black;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 50px;
+    opacity: 1;
+}
 
 /* FAQS css*/
 
@@ -764,7 +923,10 @@ input{
 
 /* ubicacion css*/
       #map {
-        height: 50%;
+    height: 67%;
+    margin-left: 223px;
+    width: 65%;
+    margin-top: 68px;
       }
 #soma:link{
     text-decoration: none;
@@ -785,7 +947,9 @@ input{
 
 
 .himap{
-    float: right;	
+	align-self: center;
+	align-content: center;
+    
 }
 .articleubi{
     background: #000000;
@@ -800,16 +964,16 @@ input{
 
 .dedo {
     align-items: center;
-    padding-top: 20px;
-    padding-left: 20px;
-    padding-right: 20px;
-    padding-bottom: 20px;
+    padding-top: 0px;
+    padding-left: 0px;
+    padding-right: 0px;
+    padding-bottom: 0px;
     margin-top: 47px;
     width: 214px;
     height: 299px;
 }
 .dedfd {
-    margin-top: -9px;
+    margin-top: 8px;
     color: rgba(255,255,255,1.00);
     text-shadow: 0px 0px none;
     font-size: large;
@@ -824,11 +988,12 @@ input{
 }
 
 .hjfoot {
-    margin-left: 542px;
-    margin-top: -73px;
+    margin-left: 613px;
+    margin-top: -53px;
     margin-right: 587px;
     width: 206px;
     position: absolute;
+    padding-left: 0px;
 }
 
 /* ==========================================================================

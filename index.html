@@ -109,15 +109,16 @@
 		<article id="contacto" class="article1contact">
 		  <h1>·Contacto·</h1>
 		  <div class="divcont">
+			  <div class="dev">
 		    <form action="" method="" class="grid-container-form">
 		     
 			  <fieldset class="field_setA">
 		        	<legend class="leg_a item1">
 		        		<p> Nombre(s):
-		          <input name="" type="text" required="required" placeholder="Name" autocomplete="on">
+		          <input name="name5" id="name5" type="text" required="required" placeholder="Name" autocomplete="on">
 	            </p>
 		       			<p> Apellido:
-		          <input name="" type="text" required="required" placeholder="Last Name" autocomplete="on">
+		          <input name="lasname5" id="lasname5" type="text" required="required" placeholder="Last Name" autocomplete="on">
 	            </p>
 		        		<p>
 		          <input  name="" type="radio">
@@ -126,42 +127,53 @@
 		          <input type="radio" name="">
 		          F</p>
 		        		<p> Teléfono:
-		          <input type="tel" required="required" placeholder="Telephone Number" autocomplete="on" size="10" maxlength="10">
+		          <input name="movil5" type="tel" required="required" id="movil5" placeholder="Telephone Number" autocomplete="on" size="10" maxlength="10">
 	            </p>
 		       			<p> E-mail:
-		          <input name="" type="email" required="required" placeholder="enter mail" autocomplete="on">
+		          <input name="mail5" id="mail5" type="email" required="required" placeholder="enter mail" autocomplete="on">
 	            </p>
-		       			<p> Fecha de nacimento
-		          <input type="date" required="required" autocomplete="on">
+		       			<p> Fecha de nacimento:
+		          <input  id="nacimient" type="date" required="required" title="yy/mm/dd" autocomplete="on">
 	            </p>
-		       			<p>Dirección:
+						
+				
+		       			<p>Dirección:</p>
+				  
 	            <p>
-		            <input type="text" placeholder="Adress" autocomplete="on">
+		          
+				  
+				
+		            <input name="direccion1" type="text" id="direccion1" placeholder="Adress" autocomplete="on">
 	            </p>
 		        <p>
-		          <input type="text">
+		          <input name="direccion2" type="text" id="direccion2">
 	            </p>
+				
 		        <p>
-		          <input type="text">
+		          <input name="direccion3" type="text" id="direccion3">
 	            </p>
-		        </p>
-		        	</legend>
+				</legend>
+						
+		        	
 	          </fieldset>
 		      <fieldset class="field_setb">
 		        		<legend class="leg_b item2">
 		        		<p>Parte del cuerpo:
-		          <input type="text" required="required" placeholder="Body part">
+		          <input id="b_p" type="text" required="required" placeholder="Body part">
 	            </p>
 		      		 	<p>Tamaño: (cm)
-		          <input type="text" placeholder="What size?">
+		          <input id="sz" type="text" placeholder="What size?"  maxlength="12">
 	            </p>
-		        		<p>Descripción:
-		          <textarea rows="5" required="required" wrap="soft" placeholder="Write your text"></textarea>
-	            </p>
-		       			<p>Referencia: ("jpg" ,"png","pdf")
-		          <input type="file" name="">
-	            </p>
-		        		<p>
+        		<p>Descripción:</p>
+		          <textarea class="wurt" cols="25" rows="5" required="required" placeholder="Write your text"></textarea>
+	            
+		       		
+							<p>Referencia: ("jpg" ,"png","pdf")</p>
+				
+		         <input name="" type="file" id="seleccionar" class="button">
+									
+	            
+        		<p>
 		          <input  type="checkbox">
 		          He leido el <a class="popup" onclick="myFunction()">aviso de privasidad <span class="popuptext" id="myPopup">
 		            <iframe src="aviso de privasidad.html" frameborder="0"></iframe>
@@ -170,15 +182,18 @@
 		        		<p>
 		          <input type="checkbox">
 		          Tengo mas de 18 años de edad.</p>
-		        </legend>
-	          </fieldset>
-			<div class="divsend">
-		             	<input class="popups" onclick="myFunctions()" type="submit">
+		        </legend>			  			<div class="divsend">
+		             	<input class="button" onclick="myFunctions()" type="submit">
 			<span class="popuptext" id="resd">
-		
 		    </span>
 				</div>
+	          </fieldset>
+
 	        </form>
+			  
+			  </div>
+</div>
+		
 <div class="divconhed">
 			  <span class="hed_div_text">									
 		    
@@ -190,7 +205,7 @@
 		      <h3>52 (55) 6844 8325</h3>	
 				  </span>
 			</div>
-		  </div>
+		  
 </article>
 	<!--contacto fin-->
 	
@@ -255,7 +270,7 @@
 		</article>
 		<article id="ubicacion" class="articleubi">
 			<h1> ·Ubicación· </h1>
- <div class="himap" style="width: 711px; height: 388px; float: none; z-index: 1; padding-top: 20px; padding-right: 20px; padding-left: 20px; margin-top: 42px; margin-right: 542px; margin-left: 228px; display: block; position: relative;" id="map"></div>
+ <div class="himap" id="map"></div>
     <script>
   function initMap() {
         var Soyfeliz_s = {lat: 19.419142055598304, lng: -99.15939045000005};

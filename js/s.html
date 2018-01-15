@@ -38,7 +38,7 @@
     </style>
   </head>
   <body>
-	  <div id="style-selector-control" class="map-control">
+	  <div  style="color: rgba(0,0,0,1.00)"id="style-selector-control" class="map-control">
       <input type="radio" name="show-hide" id="hide-poi"
           class="selector-control">
       <label for="hide-poi">Hide</label>
@@ -50,11 +50,8 @@
     <script>
 		
       function initMap() {
-
-        // Create a new StyledMapType object, passing it an array of styles,
-        // and the name to be displayed on the map type control.
-        var styledMapType = new google.maps.StyledMapType(
-            [           
+        var Soyfeliz_s = {lat: 19.419142055598304, lng: -99.15939045000005};
+		  var styledMapType = new google.maps.StyledMapType ( [
   {
     "elementType": "geometry",
     "stylers": [
@@ -273,13 +270,15 @@
     ]
   }
 ],
-            {name: 'SoyFeliz Studio'});
-
-        // Create a map object, and include the MapTypeId to add
-        // to the map type control.
-		var SoyFeliz_Studio = {lat: 19.419142055598304, lng: -99.15939045000005};  
+	 {name: 'Styled Map'}	  
+		  );
         var map = new google.maps.Map(document.getElementById('map'), {
-          center:SoyFeliz_Studio,
+          zoom: 19,
+          center: Soyfeliz_s
+		 
+        });
+        var map = new google.maps.Map(document.getElementById('map'), {
+          center: Soyfeliz_s,
           zoom: 19,
           mapTypeControlOptions: {
             mapTypeIds: ['roadmap', 'satellite', 'hybrid', 'terrain',
@@ -291,46 +290,40 @@
 		  mapTypeControl:false,
 		  streetViewControl:false,	
 
-        });
+        });   
 		  
-  var contentString = '<div id="content">'+
+		map.mapTypes.set('styled_map', styledMapType);
+        map.setMapTypeId('styled_map');
+      
+        var contentString = '<div id="content">'+
             '<div id="siteNotice">'+
             '</div>'+
-            '<h1 id="firstHeading" class="firstHeading">Uluru</h1>'+
+            '<h1 id="firstHeading" class="firstHeading">SoyFeliz Studio</h1>'+
             '<div id="bodyContent">'+
-            '<p><b>Uluru</b>, also referred to as <b>Ayers Rock</b>, is a large ' +
-            'sandstone rock formation in the southern part of the '+
-            'Northern Territory, central Australia. It lies 335&#160;km (208&#160;mi) '+
-            'south west of the nearest large town, Alice Springs; 450&#160;km '+
-            '(280&#160;mi) by road. Kata Tjuta and Uluru are the two major '+
-            'features of the Uluru - Kata Tjuta National Park. Uluru is '+
-            'sacred to the Pitjantjatjara and Yankunytjatjara, the '+
-            'Aboriginal people of the area. It has many springs, waterholes, '+
-            'rock caves and ancient paintings. Uluru is listed as a World '+
-            'Heritage Site.</p>'+
-            '<p>Attribution: Uluru, <a href="https://en.wikipedia.org/w/index.php?title=Uluru&oldid=297882194">'+
-            'https://en.wikipedia.org/w/index.php?title=Uluru</a> '+
-            '(last visited June 22, 2009).</p>'+
+            '<p>Calle Tabasco 152 Int 202, ' +
+            ' Roma Norte, Roma Nte.,  '+
+            '06700 Cuauhtemoc, CDMX. '+
+            '<p><a style="text-decoration:none;"href="https://goo.gl/maps/nbnDRwKHL5m">'+
+            'Ver en Google Maps</a> '+
+            '</p>'+
             '</div>'+
             '</div>';
 
         var infowindow = new google.maps.InfoWindow({
-          content: contentString
+          content: contentString,
+          maxWidth: 400
         });
-
-	  
- var image = 'http://soyfelizstudio.com/logo12.svg';
-        var beachMarker = new google.maps.Marker({
-          position: {lat: 19.419142055598304, lng: -99.15939045000005},
+        
+		var image = 'http://soyfelizstudio.com/logo12.svg';
+        var marker = new google.maps.Marker({
+          position: Soyfeliz_s,
           map: map,
-          icon: image
+		 icon: image,	
+          title: 'SoyFeliz Studio'
         });
-		marker.addListener('click', function() {
+        marker.addListener('click', function() {
           infowindow.open(map, marker);
         });
-        //Associate the styled map with the MapTypeId and set it to display.
-        map.mapTypes.set('styled_map', styledMapType);
-        map.setMapTypeId('styled_map');
       }
     </script>
     <script async defer

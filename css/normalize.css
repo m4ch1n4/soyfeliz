@@ -250,6 +250,7 @@ textarea {
     font-size: 100%; /* 1 */
     line-height: 1.15; /* 1 */
     margin: 0; /* 2 */
+    border-top-right-radius: 0px;
 }
 
 /**
@@ -260,7 +261,8 @@ textarea {
 button,
 input { /* 1 */
     overflow: visible;
-    font-family: "Montserrat Light";
+    font-family: "Quicksand Regular";
+    border-top-left-radius: 0px;
 }
 
 /**
